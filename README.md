@@ -21,6 +21,7 @@ This is NOT based on Chromium/CEF/QtWebEngine — it is a custom mini browser en
 ---
 
 ## Folder Structure
+```
 MiniBrowser/
 │
 ├── src/
@@ -54,7 +55,7 @@ MiniBrowser/
 │ ├── MiniBrowser (generated)
 │
 └── README.md
-
+```
 
 ---
 
@@ -99,7 +100,7 @@ src/render/SDLRenderer.cpp \
 ```
 
 ## Test Page
-Edit the html file and use only <h1> and <p>:
+Edit the html file and use only `<h1>` and `<p>`:
 ```bash
 test_pages/index.html
 ```
@@ -112,8 +113,8 @@ The browser reads the html file using:
 
 ### 2. Tokenizer
 Converts html file into token like:
-- OPEN_TAG(<h1>)
-- CLOSE_TAG(</h1>)
+- OPEN_TAG(`<h1>`)
+- CLOSE_TAG(`</h1>`)
 - TEXT(Hihahihahiha)
 
 File:
@@ -126,6 +127,6 @@ File:
 - Parser.cpp(use staack to push the open tags and text inside it and then pop for closing tags)
 
 ## Notes
-- The browser only supports a very small HTML tags i.e. <h1> and <p>.
+- The browser only supports a very small HTML tags i.e. `<h1>` and `<p>`.
 - Modern website will not work(no JavaScript engine, no layout engine like flexbox, etc.).
 - The goal is to learn browser internals, not replacing chrome.
